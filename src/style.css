@@ -100,30 +100,6 @@ body {
   border-color: #00ff00;
 }
 
-.debug-controls {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  pointer-events: auto;
-}
-
-.debug-controls button {
-  padding: 10px 20px;
-  background: #222;
-  color: #fff;
-  border: 1px solid #444;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.debug-controls button:hover {
-  background: #333;
-  border-color: #666;
-}
-
 /* Gritty COD-style elements */
 .hit-marker {
   position: absolute;

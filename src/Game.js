@@ -259,11 +259,11 @@ export class Game {
 
     checkWinLoss() {
         if (this.frontlineX <= -48) {
-            this.gameState = 'VICTORY';
-            window.dispatchEvent(new CustomEvent('game-over', { detail: { result: 'VICTORY' } }));
-        } else if (this.frontlineX >= 48) {
             this.gameState = 'DEFEAT';
             window.dispatchEvent(new CustomEvent('game-over', { detail: { result: 'DEFEAT' } }));
+        } else if (this.frontlineX >= 48) {
+            this.gameState = 'VICTORY';
+            window.dispatchEvent(new CustomEvent('game-over', { detail: { result: 'VICTORY' } }));
         }
     }
 

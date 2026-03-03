@@ -49,15 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   updateUI();
 
-  // Debug spawn controls
-  document.getElementById('spawn-player').addEventListener('click', () => {
-    game.spawnUnit('player', 'SCRAP_HOUND');
-  });
-
-  document.getElementById('spawn-enemy').addEventListener('click', () => {
-    game.spawnUnit('enemy', 'PEACEKEEPER');
-  });
-
   // Deck click handlers
   deckButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -77,8 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hotkeys[e.key]) {
       game.spawnUnit('player', hotkeys[e.key]);
     }
-    if (e.key.toLowerCase() === 'q') game.spawnUnit('player', 'SCRAP_HOUND');
-    if (e.key.toLowerCase() === 'e') game.spawnUnit('enemy', 'PEACEKEEPER');
   });
 
   // Hit Marker logic
