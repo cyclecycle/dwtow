@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone Wars TOW</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <canvas id="game-canvas"></canvas>
+    <div id="ui-overlay">
+      <div id="hud-top">
+        <div id="flux-display">FLUX: <span id="flux-value">100</span> (+<span id="flux-rate">10</span>/s)</div>
+        <div id="tug-of-war-container">
+          <div id="tug-of-war-bar">
+            <div id="frontline-indicator"></div>
+          </div>
+        </div>
+      </div>
+      <div id="zone-controls"></div>
+      <div id="unit-deck">
+        <button class="deck-btn" data-type="SCRAP_HOUND">1: Hound (15)</button>
+        <button class="deck-btn" data-type="PEACEKEEPER">2: PK (25)</button>
+        <button class="deck-btn" data-type="AEGIS_DRONE">3: Aegis (60)</button>
+        <button class="deck-btn" data-type="MORTAR_WALKER">4: Mortar (80)</button>
+        <button class="deck-btn" data-type="GOLIATH_MECH">5: Goliath (200)</button>
+      </div>
+      <div class="debug-controls">
+        <button id="spawn-player">Spawn Player (Q)</button>
+        <button id="spawn-enemy">Spawn Enemy (E)</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
