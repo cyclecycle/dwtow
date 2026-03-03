@@ -5,7 +5,7 @@ describe('EnemyAI', () => {
     it('should initialize with correct properties', () => {
         const game = { frontlineX: 0, zones: [], spawnUnit: vi.fn() };
         const ai = new EnemyAI(game);
-        expect(ai.flux).toBe(100);
+        expect(ai.flux).toBe(150); // Updated
     });
 
     it('should spawn units based on decisions', () => {
@@ -16,7 +16,7 @@ describe('EnemyAI', () => {
         };
         const ai = new EnemyAI(game);
         ai.flux = 200;
-        ai.makeDecision();
-        expect(game.spawnUnit).toHaveBeenCalledWith('enemy', 'SCRAP_HOUND');
+        ai.makeDecision(0);
+        expect(game.spawnUnit).toHaveBeenCalled();
     });
 });

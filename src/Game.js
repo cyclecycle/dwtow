@@ -267,6 +267,14 @@ export class Game {
         }
     }
 
+    buildAIBox(x) {
+        const markerGeo = new THREE.CylinderGeometry(1, 1, 2, 8);
+        const markerMat = new THREE.MeshStandardMaterial({ color: 0xff00ff }); // AI is purple/red
+        const extractor = new THREE.Mesh(markerGeo, markerMat);
+        extractor.position.set(x, 1, (Math.random() - 0.5) * 5);
+        this.scene.add(extractor);
+    }
+
     shake(intensity) {
         this.shakeIntensity = Math.max(this.shakeIntensity, intensity);
     }
